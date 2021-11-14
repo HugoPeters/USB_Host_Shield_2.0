@@ -1614,17 +1614,9 @@ MAKE_PIN(P15, 15); // SS
 
 // Pinout for ESP32 dev module
 
-MAKE_PIN(P0, 0);
-MAKE_PIN(P1, 1); // TX0
-MAKE_PIN(P10, 10); // TX1
-MAKE_PIN(P3, 3); // RX0
-MAKE_PIN(P21, 21); // SDA
-MAKE_PIN(P22, 22); // SCL
-MAKE_PIN(P19, 19); // MISO
-MAKE_PIN(P23, 23); // MOSI
-MAKE_PIN(P18, 18); // SCK
-MAKE_PIN(P5, 5); // SS
-MAKE_PIN(P17, 17); // INT
+#define USBHOST_MAKE_PINS
+#include "../wispmUsbPins.h"
+#undef USBHOST_MAKE_PINS
 
 #endif
 
